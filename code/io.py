@@ -1,7 +1,7 @@
 import re
 import sys
 
-class io:
+class IO:
     def __init__(self) -> None:
         self.the = {}
         self.help = " \n\
