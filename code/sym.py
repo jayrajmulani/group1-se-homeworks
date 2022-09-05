@@ -2,24 +2,33 @@ import math
 
 
 class Sym:
-    def Sym_add(self):
-        C.append((input("Enter a char"))[0])
+    def __init__(self, c, s) -> None:
+        self.n = 0
+        self.at = c if c else 0
+        self.name = s if s else ""
+        self._has = {}
 
-    def calculate_mode(self):
-        print("Mode of List C is % s" % (max(set(C), key=C.count)))
+    def add(self, v):
+        if v != "?":
+            self.n = self.n + 1
+            if v in self._has:
+                self._has[v] += 1
+            else:
+                self._has[v] = 1
 
-    def calculate_entropy(self):
-        en = 0
-        for i in P:
-            en = en + i*(math.log2(i))
-        en = en*(-1)
-        print("Entropy is", en)
+    def mid(self, col, mode, most=None):
+        most = -1
+        for k, v in self._has.items():
+            if v > most:
+                mode = k
+                most = v
+        return mode
 
-
-C = ['@', '#', '#', '%', '*']
-P = [0.1, 2, 5, 0.23, 3]
-
-s1 = Sym()
-s1.Sym_add()
-s1.calculate_mode()
-s1.calculate_entropy()
+    def div(self, e):
+        def func(p):
+            return p*(math.log(p, 2))
+        e = 0
+        for _, i in self._has:
+            if i > 0:
+                e = e-func(i/self.n)
+        return (e)
