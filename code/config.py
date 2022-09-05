@@ -1,1 +1,1 @@
-settings = {"nums": 3}
+settings = {"nums": 1000}

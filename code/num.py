@@ -2,10 +2,11 @@ from utils import *
 import sys
 import random
 from config import *
+import statistics
 
 
 class Num:
-    def __init__(self, c, s) -> None:
+    def __init__(self, c=None, s=None) -> None:
         self.n = 0
         self.at = c if c else 0
         self.name = s if s else ""
@@ -13,7 +14,7 @@ class Num:
         self.isSorted = True
         self.lo = sys.maxsize
         self.high = -sys.maxsize - 1
-        self.w = -1 if "-" in s else 1
+        self.w = -1 if s and "-" in s else 1
 
     def nums(self):
         if not self.isSorted:
@@ -38,7 +39,8 @@ class Num:
     def div(self, a=None):
         if not a:
             a = self._has
-        return standard_dev(a)
+        # return standard_dev(a)
+        return statistics.stdev(a)
 
     def mid(self, a=None):
         if not a:
