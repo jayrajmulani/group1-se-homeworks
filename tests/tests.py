@@ -36,6 +36,3 @@ def test_bignum():
         n.add(i)
     print(n.nums())
     assert len(n._has) == 32
-
-
-# print(cli.a)
