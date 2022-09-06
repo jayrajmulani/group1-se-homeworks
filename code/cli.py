@@ -64,5 +64,3 @@ OPTIONS:\n\
             exit(self.help)
         return t
 
-
-a = 1
