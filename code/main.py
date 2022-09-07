@@ -5,13 +5,14 @@ import random
 
 obj = cli.CLI()
 the = obj.cli(obj.the)
-config.settings["nums"] = obj.the['nums']
+config.settings["nums"] = obj.the["nums"]
 print(obj.the)
+
 
 def populate_num():
     n = num.Num()
     for i in range(1, 1001):
-        n.add(random.randint(1,i+1))
+        n.add(i)
     print(n.nums())
     print(len(n._has))
 
