@@ -28,12 +28,18 @@ class Num:
             self.lo = min(v, self.lo)
             self.high = max(v, self.high)
             if len(self._has) < settings["nums"]:
-                self._has.append(v)
+                pos = 1 + len(self._has)
+            
+            elif random.random() < settings["nums"]/self.n:
+                pos = random.randint(0,len(self._has)-1)
+            
             else:
-                pos = int(random.random() * 100) % len(self._has)
+                pos = None
+            if pos:
+                self.isSorted = False
                 self._has[pos] = v
 
-            self.isSorted = False
+            
 
     def div(self, a=None):
         if not a:
