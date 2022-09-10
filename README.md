@@ -1,4 +1,4 @@
-![Intro page](./images/lua-to-python.gif)
+![Intro page](./images/lua-to-python2.gif)
 
 # Smart Summaries
 
