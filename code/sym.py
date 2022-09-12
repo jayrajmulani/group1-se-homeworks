@@ -32,5 +32,4 @@ class Sym:
         for _, i in self._has.items():
             if i > 0:
                 e = e - func(i / self.n)
-        print(e)
         return e

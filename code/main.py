@@ -1,20 +1,17 @@
 import cli
 import config
-import num
-import random
+import sys
+
+# import num
+# import random
+sys.path.append("../tests/")
+
+import tests
 
 obj = cli.CLI()
 the = obj.cli(obj.the)
-config.settings["nums"] = obj.the["nums"]
-print(obj.the)
+config.settings = the
 
-
-def populate_num():
-    n = num.Num()
-    for i in range(1, 1001):
-        n.add(i)
-    print(n.nums())
-    print(len(n._has))
-
-
-populate_num()
+if the["eg"] != "nothing":
+    tests.runs(the["eg"])
+exit(tests.fails)

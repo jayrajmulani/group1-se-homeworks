@@ -6,7 +6,8 @@ import statistics
 
 
 class Num:
-    def __init__(self, c=None, s=None) -> None:
+    def __init__(self, c=None, s=None, capacity=None) -> None:
+        # print(config.settings["nums"])
         self.n = 0
         self.at = c if c else 0
         self.name = s if s else ""
@@ -15,6 +16,7 @@ class Num:
         self.lo = sys.maxsize
         self.high = -sys.maxsize - 1
         self.w = -1 if s and "-" in s else 1
+        self.capacity = settings["nums"] if capacity == None else capacity
 
     def nums(self):
         if not self.isSorted:
@@ -23,16 +25,18 @@ class Num:
         return self._has
 
     def add(self, v, pos=None):
+        # print("ADDD", config.settings["nums"])
         if v != "?":
             self.n = self.n + 1
             v = int(v)
             self.lo = min(v, self.lo)
             self.high = max(v, self.high)
-            if len(self._has) < settings["nums"]:
+            if len(self._has) < self.capacity:
                 pos = 1 + len(self._has)
                 self._has.append(v)
+                self.isSorted = False
             else:
-                if random.random() < settings["nums"] / self.n:
+                if random.random() < self.capacity / self.n:
                     pos = random.randint(0, len(self._has) - 1)
                 else:
                     pos = None
@@ -43,7 +47,6 @@ class Num:
     def div(self, a=None):
         if not a:
             a = self._has
-        # return standard_dev(a)
         return statistics.stdev(a)
 
     def mid(self, a=None):
