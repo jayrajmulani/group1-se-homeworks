@@ -1,1 +1,4 @@
-settings = {"nums": 1000}
+
+settings = {"nums": 1000, "sep" : ","}
+
+
