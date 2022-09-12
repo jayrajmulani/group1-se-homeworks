@@ -51,6 +51,8 @@ def runs(k):
     if not eg[k]:
         return False
     status, message = eg[k]()
+    if k == "LIST":
+        message = "PASS"
     utils.print_result(message, k, status)
     config.settings = old_settings
     return status
@@ -69,7 +71,7 @@ def bad():
 def all():
     global fails
     print("-" * 50)
-    for k in list():
+    for k in list()[1]:
         if k != "ALL":
             if not runs(k):
                 fails += 1
@@ -77,19 +79,19 @@ def all():
 
 
 def list():
-    return sorted(eg.keys())
+    return True, sorted(eg.keys())
 
 
 def ls():
     print("\nExamples of python3 main.py -e...")
-    for k in list():
+    for k in list()[1]:
         print(f"\t{k}")
     return True, "PASS"
 
 
 eg["BAD"] = bad
 eg["ALL"] = all
-# eg["LIST"] = list
+eg["LIST"] = list
 eg["LS"] = ls
 eg["bignum"] = test_bignum
 # eg["csv"] = test_csv
