@@ -41,7 +41,7 @@ def test_bignum():
     n = num.Num(capacity=32)
     for i in range(1, 1001):
         n.add(i)
-    status = "PASS" if len(n._has) == 34 else "FAIL"
+    status = "PASS" if len(n._has) == 32 else "FAIL"
     print(n.nums())
     return True, status
 
