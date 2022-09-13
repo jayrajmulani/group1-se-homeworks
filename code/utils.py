@@ -1,6 +1,7 @@
 import config
 import traceback
 import cli
+import math
 
 
 def standard_dev(nums):
@@ -39,3 +40,12 @@ def copy(t, u):
     for k, v in u.iteritems():
         u[k] = copy(v)
     return setmetatable(u, getmetatable(t))
+
+
+def rnd(x, places):
+    if places:
+        mult = pow(10, places)
+    else:
+        mult = pow(10, 2)
+
+    return math.floor(x * mult + 0.5) / mult
