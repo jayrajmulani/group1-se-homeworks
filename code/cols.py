@@ -1,27 +1,27 @@
-from asyncio.windows_events import NULL
 import num, sym
 import re
 
+
 class Cols:
-    def __init__(self, names)-> None:
+    def __init__(self, names) -> None:
         self.names = names if names else {}
         self.all = {}
-        self.klass=NULL   
-        self.x={}       
-        self.y={} 
-    
+        self.klass = None
+        self.x = {}
+        self.y = {}
+
     def cols(self):
         number_x = 1
         number_y = 1
         for c in self.names:
             s = self.names[c]
-            if (re.search("^[A-Z]*", s)):
-                self.col = num.Num(c,s)
+            if re.search("^[A-Z]*", s):
+                self.col = num.Num(c, s)
             else:
-                self.col = sym.Sym(c,s)
+                self.col = sym.Sym(c, s)
             self.all[c] = self.col
-            if not((re.search("[:$]", s))):
-                if (re.search("[!+-]", s)):
+            if not ((re.search("[:$]", s))):
+                if re.search("[!+-]", s):
                     self.y[number_y] = self.col
                     number_y += 1
                 else:
@@ -30,8 +30,9 @@ class Cols:
             else:
                 self.klass = self.col
 
-#   ONLY FOR TESTING      
-# 
+
+#   ONLY FOR TESTING
+#
 # print(self.all, "x\n",self.x, "y\n",self.y, "klass", self.klass)
 
 # names= {1:       "Clndrs",

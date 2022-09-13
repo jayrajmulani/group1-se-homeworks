@@ -5,5 +5,5 @@ settings = {
     "dump": False,
     "file": "../data/file.csv",
     "eg": None,
-    "sep": ";"
+    "sep": ",",
 }

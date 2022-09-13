@@ -7,7 +7,6 @@ import statistics
 
 class Num:
     def __init__(self, c=None, s=None, capacity=None) -> None:
-        # print(config.settings["nums"])
         self.n = 0
         self.at = c if c else 0
         self.name = s if s else ""

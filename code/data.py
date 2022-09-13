@@ -3,13 +3,12 @@ from cols import *
 from row import *
 
 
-class data:
+class Data:
     def __init__(self, src=None) -> None:
-        self.cols = 0
+        self.cols = None
         self.rows = {}
-        if type(src) == "string":
-            csv(src, self.add())
-
+        if isinstance(src, str):
+            csv(src, self.add)
         else:
             for row in src.values():
                 self.add(row)
@@ -17,9 +16,10 @@ class data:
     def add(self, xs, row=None):
         if not self.cols:
             self.cols = Cols(xs)
+            print("COLS", self.cols)
         else:
-            row.append(self.row, xs.cells and xs or row(xs))
-            for todo in [self.cols.x, self.cols.y]:
+            self.rows[1 + len(self.rows)] = xs if "cells" in xs.keys() else Row(xs)
+            for _, todo in [self.cols.x, self.cols.y]:
                 for col in [todo]:
                     col.add(self, row.cells[col.at])
 

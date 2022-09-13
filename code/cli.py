@@ -16,7 +16,7 @@ OPTIONS:\n\
 -h  --help      show help                             = false\n\
 -n  --nums      number of nums to keep                = 512\n\
 -s  --seed      random number seed                    = 10019\n\
--S  --seperator feild seperator                       = , "
+-S  --sep       feild sep                             = , "
         self.pattern = r"-(\w+)[\s]*--[\s]*(\w+)[\s]*[^=]*[\s]*=[\s]*(.*)"
         re.sub(self.pattern, self.operation, self.help)
 

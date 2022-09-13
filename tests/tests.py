@@ -2,10 +2,9 @@ import sys
 import random
 import utils
 
-
 sys.path.append("../code/")
 
-import num, sym, config, utils, cols, data2
+import num, sym, config, utils, cols, data
 
 eg = {}
 fails = 0
@@ -90,32 +89,34 @@ def ls():
     return True, "PASS"
 
 
+def test_data():
+    d = data.Data("../data/file.csv")
+    print("0000")
+    for i, col in d.items():
+        print("COL", col)
+    return True, "PASS"
+
+
+def test_stats():
+    data = data.Data()
+    div = cols.data()
+    mid = cols.mid()
+    print("xmid", data.stats(2, data.cols.x, mid))
+    print("ymid", data.stats(3, data.cols.y, mid))
+    print("xdiv", data.stats(2, data.cols.x, div))
+    print("ydiv", data.stats(3, data.cols.y, div))
+    return True, "PASS"
+
+
 eg["BAD"] = bad
 eg["ALL"] = all
 eg["LIST"] = list
 eg["LS"] = ls
 eg["bignum"] = test_bignum
 # eg["csv"] = test_csv
-# eg["data"] = test_data()
+# eg["data"] = test_data
 eg["num"] = test_num
-# eg["stats"] = test_stats()
+# eg["stats"] = test_stats
 eg["the"] = test_the
 eg["sym"] = test_sym
 fails = 0
-
-
-def data():
-    data = data.data("../data/file.csv")
-    for i, col in data.items():
-        print(col)
-    return "true"
-
-
-def stats():
-    data = data2.data()
-    div = cols.data()
-    mid = cols.mid()
-    print("xmid", stats(2, data2.cols.x, mid))
-    print("xmid", stats(3, data2.cols.y, div))
-    print("xmid", stats(2, data2.cols.x, mid))
-    print("xmid", stats(3, data2.cols.y, div))

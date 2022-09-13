@@ -1,6 +1,8 @@
-import utils
+import copy
 
 
-class row:
+class Row:
     def __init__(self, t):
-        return {"cells": t, "cooked": utils.copy(t), "isEvaled": False}
+        self.cells = t
+        self.cooked = copy.deepcopy(t)
+        self.isEvaled = False
