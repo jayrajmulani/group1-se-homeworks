@@ -10,7 +10,7 @@ class Cols:
         self.x = {}
         self.y = {}
 
-    def cols(self):
+    # def cols(self):
         number_x = 1
         number_y = 1
         for c in self.names:
