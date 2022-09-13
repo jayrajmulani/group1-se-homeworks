@@ -1,5 +1,6 @@
 import config
 import traceback
+import cli
 
 
 def standard_dev(nums):
@@ -18,3 +19,14 @@ def dump_error(e):
 def print_result(message, k, status):
     print(f"\n!!!!!\t{message}\t{k}\t{status}")
     print()
+
+
+def csv(fname, fun, sep=None,src=None,s=None,t=None):
+    sep = config.settings["sep"]
+    with open(fname) as src:
+        while(s := src.readline().rstrip()):
+            t = {}
+            for s1 in s.split(sep):
+                t[1 + len(t)] = cli.CLI.coerce(s1)
+
+            fun(t)
