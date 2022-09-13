@@ -1,10 +1,11 @@
 import sys
 import random
+import utils
 
 
 sys.path.append("../code/")
 
-import num, sym, config, utils
+import num, sym, config, utils, cols, data2
 
 eg = {}
 fails = 0
@@ -101,3 +102,20 @@ eg["num"] = test_num
 eg["the"] = test_the
 eg["sym"] = test_sym
 fails = 0
+
+
+def data():
+    data = data.data("../data/file.csv")
+    for i, col in data.items():
+        print(col)
+    return "true"
+
+
+def stats():
+    data = data2.data()
+    div = cols.data()
+    mid = cols.mid()
+    print("xmid", stats(2, data2.cols.x, mid))
+    print("xmid", stats(3, data2.cols.y, div))
+    print("xmid", stats(2, data2.cols.x, mid))
+    print("xmid", stats(3, data2.cols.y, div))

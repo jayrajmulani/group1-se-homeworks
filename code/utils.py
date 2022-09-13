@@ -21,12 +21,21 @@ def print_result(message, k, status):
     print()
 
 
-def csv(fname, fun, sep=None,src=None,s=None,t=None):
+def csv(fname, fun, sep=None, src=None, s=None, t=None):
     sep = config.settings["sep"]
     with open(fname) as src:
-        while(s := src.readline().rstrip()):
+        while s := src.readline().rstrip():
             t = {}
             for s1 in s.split(sep):
                 t[1 + len(t)] = cli.CLI.coerce(s1)
 
             fun(t)
+
+
+def copy(t, u):
+    if type(t) != "table":
+        return t
+    u = {}
+    for k, v in u.iteritems():
+        u[k] = copy(v)
+    return setmetatable(u, getmetatable(t))
