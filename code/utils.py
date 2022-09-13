@@ -1,6 +1,7 @@
 import config
 import traceback
 import cli
+import math
 
 
 def standard_dev(nums):
@@ -30,3 +31,15 @@ def csv(fname, fun, sep=None,src=None,s=None,t=None):
                 t[1 + len(t)] = cli.CLI.coerce(s1)
 
             fun(t)
+
+
+def rnd(x, places):
+    if places:
+        mult = pow(10,places)
+    else:
+        mult = pow(10,2)
+
+    return math.floor(x * mult + 0.5) /mult
+
+
+
