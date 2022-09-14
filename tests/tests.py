@@ -91,20 +91,17 @@ def ls():
 
 def test_data():
     d = data.Data("../data/file.csv")
+
     for i, col in d.cols.x.items():
-        print("COL", col)
-    return True, "PASS"
+        return True, "PASS"
 
 
 def test_stats():
     d = data.Data("../data/file.csv")
-    # div = cols.data()
-    # mid = cols.mid()
-    print(d.cols.all)
-    print("xmid", d.stats( fun = "mid", places = 2 ))
-    print("ymid", d.stats( fun = "mid", places = 2))
-    print("xdiv", d.stats( fun = "div", places = 3))
-    print("ydiv", d.stats( fun = "div", places = 3))
+    print("xmid", d.stats( fun = "mid", places = 2, showCols=d.cols.x))
+    print("xdiv", d.stats( fun = "div", places = 3, showCols=d.cols.x))
+    print("ymid", d.stats( fun = "mid", places = 2, showCols=d.cols.y))
+    print("ydiv", d.stats( fun = "div", places = 3, showCols=d.cols.y))
     return True, "PASS"
 
 

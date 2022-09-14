@@ -24,18 +24,38 @@ def print_result(message, k, status):
 
 
 def csv(fname, fun, sep=None, src=None, s=None, t=None):
-    print(config.settings)
-    sep = config.settings["sep"]
-    with open(fname) as src:
-        while s := src.readline().rstrip():
+    # print(config.settings)
+    sep = config.settings["sep"].strip()
+    with open(fname) as f:
+        column_names = [c.strip() for c in f.readline().split(sep)]
+        column_indices = list(range(1,len(column_names)+1))
+        columns = dict(zip(column_indices,column_names))
+        while True:
             t = {}
-            for s1 in s.split(sep):
-                print(s1)
+            line = f.readline()
+            for s in line.split(sep):
                 try:
-                    t[1 + len(t)] = cli.CLI.coerce(s1)
+                    s = int(s)
                 except:
-                    pass
-            fun(t)
+                    s = None
+                t[1+len(t)] = s
+            fun(xs = columns, row = t)
+            if not line or len(line.strip()) == 0:
+                break
+
+
+    # with open(fname) as src:
+    #     t = {}
+    #     while s := src.readline().rstrip():
+            
+    #         for s1 in s.split(sep):
+    #             # print(s1)
+    #             try:
+    #                 t[1 + len(t)] = cli.CLI.coerce(s1)
+    #             except:
+    #                 pass
+    #         # print("TTTTTTT", t)
+    #         fun(t)
 
 
 def rnd(x, places):
