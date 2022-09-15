@@ -1,14 +1,12 @@
 import config
 import traceback
-import cli
 import math
-import copy
 
 
 def standard_dev(nums):
     mean = sum(nums) / len(nums)
     std = (sum([((x - mean) ** 2) for x in nums]) / len(nums)) ** 0.5
-    return std
+    return round(std, 2)
 
 
 def dump_error(e):
@@ -24,18 +22,23 @@ def print_result(message, k, status):
 
 
 def csv(fname, fun, sep=None, src=None, s=None, t=None):
-    print(config.settings)
-    sep = config.settings["sep"]
-    with open(fname) as src:
-        while s := src.readline().rstrip():
+    sep = config.settings["sep"].strip()
+    with open(fname) as f:
+        column_names = [c.strip() for c in f.readline().split(sep)]
+        column_indices = list(range(1, len(column_names) + 1))
+        columns = dict(zip(column_indices, column_names))
+        while True:
             t = {}
-            for s1 in s.split(sep):
-                print(s1)
+            line = f.readline()
+            for s in line.split(sep):
                 try:
-                    t[1 + len(t)] = cli.CLI.coerce(s1)
+                    s = int(s)
                 except:
-                    pass
-            fun(t)
+                    s = None
+                t[1 + len(t)] = s
+            fun(xs=columns, row=t)
+            if not line or len(line.strip()) == 0:
+                break
 
 
 def rnd(x, places):

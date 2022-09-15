@@ -91,20 +91,17 @@ def ls():
 
 def test_data():
     d = data.Data("../data/file.csv")
-    print("0000")
-    for i, col in d.items():
-        print("COL", col)
-    return True, "PASS"
+
+    for i, col in d.cols.x.items():
+        return True, "PASS"
 
 
 def test_stats():
-    data = data.Data()
-    div = cols.data()
-    mid = cols.mid()
-    print("xmid", data.stats(2, data.cols.x, mid))
-    print("ymid", data.stats(3, data.cols.y, mid))
-    print("xdiv", data.stats(2, data.cols.x, div))
-    print("ydiv", data.stats(3, data.cols.y, div))
+    d = data.Data("../data/file.csv")
+    print("xmid", d.stats( fun = "mid", places = 2, showCols=d.cols.x))
+    print("xdiv", d.stats( fun = "div", places = 3, showCols=d.cols.x))
+    print("ymid", d.stats( fun = "mid", places = 2, showCols=d.cols.y))
+    print("ydiv", d.stats( fun = "div", places = 3, showCols=d.cols.y))
     return True, "PASS"
 
 
@@ -114,9 +111,9 @@ eg["LIST"] = list
 eg["LS"] = ls
 eg["bignum"] = test_bignum
 # eg["csv"] = test_csv
-# eg["data"] = test_data
+eg["data"] = test_data
 eg["num"] = test_num
-# eg["stats"] = test_stats
+eg["stats"] = test_stats
 eg["the"] = test_the
 eg["sym"] = test_sym
 fails = 0

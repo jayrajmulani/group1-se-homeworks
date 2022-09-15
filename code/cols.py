@@ -10,14 +10,16 @@ class Cols:
         self.x = {}
         self.y = {}
 
-    def cols(self):
+    # def cols(self):
         number_x = 1
         number_y = 1
         for c in self.names:
             s = self.names[c]
-            if re.search("^[A-Z]*", s):
+            if bool(re.match("^[A-Z]{1}.*", s)):
+                # print("Num", c,s)
                 self.col = num.Num(c, s)
             else:
+                # print("Sym", c,s)
                 self.col = sym.Sym(c, s)
             self.all[c] = self.col
             if not ((re.search("[:$]", s))):
@@ -32,8 +34,8 @@ class Cols:
 
 
 #   ONLY FOR TESTING
-#
-# print(self.all, "x\n",self.x, "y\n",self.y, "klass", self.klass)
+
+# 
 
 # names= {1:       "Clndrs",
 # 2 :      "Volume",
