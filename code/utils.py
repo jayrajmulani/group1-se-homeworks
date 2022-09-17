@@ -32,7 +32,7 @@ def csv(fname, fun, sep=None, src=None, s=None, t=None):
             line = f.readline()
             for s in line.split(sep):
                 try:
-                    s = int(s)
+                    s = float(s)
                 except:
                     s = None
                 t[1 + len(t)] = s

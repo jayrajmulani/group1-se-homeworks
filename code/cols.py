@@ -9,8 +9,6 @@ class Cols:
         self.klass = None
         self.x = {}
         self.y = {}
-
-    # def cols(self):
         number_x = 1
         number_y = 1
         for c in self.names:
@@ -35,7 +33,7 @@ class Cols:
 
 #   ONLY FOR TESTING
 
-# 
+#
 
 # names= {1:       "Clndrs",
 # 2 :      "Volume",

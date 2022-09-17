@@ -26,7 +26,7 @@ class Num:
         # print("ADDD", config.settings["nums"])
         if v != "?":
             self.n = self.n + 1
-            v = int(v)
+            v = float(v)
             self.lo = min(v, self.lo)
             self.high = max(v, self.high)
             if len(self._has) < self.capacity:
