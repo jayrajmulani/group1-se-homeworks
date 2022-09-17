@@ -32,7 +32,6 @@ OPTIONS:\n\
             if s1 == "false":
                 return False
             return s1
-
         try:
             return int(s)
         except:

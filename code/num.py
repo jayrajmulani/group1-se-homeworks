@@ -2,7 +2,6 @@ from utils import *
 import sys
 import random
 from config import *
-import statistics
 
 
 class Num:
@@ -46,7 +45,7 @@ class Num:
     def div(self, a=None):
         if not a:
             a = self._has
-        return statistics.stdev(a)
+        return standard_dev(a)
 
     def mid(self, a=None):
         if not a:
