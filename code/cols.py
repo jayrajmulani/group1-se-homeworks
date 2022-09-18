@@ -7,6 +7,7 @@ class Cols:
     """
 Cols class 
 
+
    - Input ==> The class takes a dictionary of header values 
         (key, value) -> (index, header_name)
 

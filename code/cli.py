@@ -4,20 +4,18 @@ import sys
 
 class CLI:
     """
-CLI class 
+ Function argument conventions: 
+ 1. two blanks denote optionas, four blanls denote locals:
+ 2. prefix n,s,is,fun denotes number,string,bool,function; 
+ 3. suffix s means list of thing (so names is list of strings)
+ 4. c is a column index (usually)
 
-   - Input ==> The class takes a dictionary of header values 
-        (key, value) -> (index, header_name)
-
-   - Output ==> The class calculates the following values
-
-        1) all : a dictionary to store all variables
-        2) X : a dictionary to store all independent variables
-        3) Y : a dictionary to store all dependent variables
-        4) klass : a dictionary to store all the variables which are skipped
+ Misc routines
+ Handle Settings
 
 """    
     def __init__(self) -> None:
+        ''' Create a `the` variables'''
         self.the = {}
         self.help = " \n\
 CSV : summarized csv file \n\
@@ -38,7 +36,7 @@ OPTIONS:\n\
         k = match.group(2)
         x = match.group(3)
         self.the[k] = self.coerce(x)
-
+    '''-- Parse `the` config settings from `help`.'''
     def coerce(self, s):
         def fun(s1):
             if s1 == "true":
@@ -51,7 +49,8 @@ OPTIONS:\n\
             return int(s)
         except:
             return fun(s)
-
+    '''-- Update settings from values on command-line flags. Booleans need no values
+ (we just flip the defaults).'''
     def cli(self, t):
         for slot in t:
             v = t[slot]
