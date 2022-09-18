@@ -36,8 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Add folders to Python Path
       run: |
-        echo "PYTHONPATH=tests" >> $GITHUB_ENV
-        echo "PYTHONPATH=data" >> $GITHUB_ENV
+        echo "PYTHONPATH=tests:data" >> $GITHUB_ENV
     - name: Run all tests.
       run: |
         python3 code/main.py -e LIST
