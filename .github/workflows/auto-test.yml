@@ -37,6 +37,15 @@ jobs:
     - name: Add Python Path
       run: |
         echo "PYTHONPATH=tests" >> $GITHUB_ENV
-    - name: Run Tests
+    - name: Run all tests.
       run: |
+        python3 code/main.py -e LIST
+        python3 code/main.py -e LS
+        python3 code/main.py -e bignum
+        python3 code/main.py -e csv
+        python3 code/main.py -e data
         python3 code/main.py -e num
+        python3 code/main.py -e stats
+        python3 code/main.py -e sym
+        python3 code/main.py -e the
+        
