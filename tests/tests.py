@@ -9,21 +9,17 @@ import num, sym, config, utils, data
 eg = {}
 fails = 0
 
-"""Settings come from big string top of "sam.lua" 
-(maybe updated from comamnd line)"""
-
-
 def test_the():
+    """Settings come from big string top of "sam.lua" 
+    (maybe updated from comamnd line)"""
     print("-" * 50)
     return True, "PASS"
 
 
-""" The middle and diversity of a set of symbols is called "mode" 
- and "entropy" (and the latter is zero when all the symbols 
- are the same)."""
-
-
 def test_sym():
+    """ The middle and diversity of a set of symbols is called "mode" 
+    and "entropy" (and the latter is zero when all the symbols 
+    are the same)."""
     print("-" * 50)
     s = sym.Sym()
     for c in ["a", "a", "a", "a", "b", "b", "c"]:
@@ -35,12 +31,11 @@ def test_sym():
     return True, status
 
 
-""" The middle and diversity of a set of numbers is called "median" 
- and "standard deviation" (and the latter is zero when all the nums 
- are the same)."""
-
 
 def test_num():
+    """ The middle and diversity of a set of numbers is called "median" 
+    and "standard deviation" (and the latter is zero when all the nums 
+    are the same)."""
     print("-" * 50)
     n = num.Num(capacity=100)
     for i in range(1, 101):
@@ -51,11 +46,10 @@ def test_num():
     return True, status
 
 
-""" Nums store only a sample of the numbers added to it (and that storage 
- is done such that the kept numbers span the range of inputs)."""
-
-
 def test_bignum():
+    """ Nums store only a sample of the numbers added to it (and that storage 
+    is done such that the kept numbers span the range of inputs)."""
+
     print("-" * 50)
     n = num.Num(capacity=32)
     for i in range(1, 1001):
@@ -65,16 +59,14 @@ def test_bignum():
     return True, status
 
 
-"""Test Engine
- 1. reset random number seed before running something.
- 2. Cache the detaults settings, and...
- 3. ... restore them after the test
- 4. Print error messages or stack dumps as required.
- 5. Return true if this all went well.
-"""
-
-
 def runs(k):
+    """Test Engine
+    1. reset random number seed before running something.
+    2. Cache the detaults settings, and...
+    3. ... restore them after the test
+    4. Print error messages or stack dumps as required.
+    5. Return true if this all went well.
+    """
     try:
         old_settings = config.settings
         if not eg[k]:
@@ -92,11 +84,8 @@ def runs(k):
         utils.print_result("CRASH", k, False)
     return status
 
-
-""" Test that the test  happes when something crashes?"""
-
-
 def bad():
+    """ Test that the test  happes when something crashes?"""
     print("-" * 50)
     try:
         print(eg["someting"]["that"]["doesn't"]["exist!"])
@@ -106,10 +95,9 @@ def bad():
         return False, "CRASH"
 
 
-"""Run all tests"""
-
 
 def all():
+    """Run all tests"""
     global fails
     for k in list()[1]:
         if k != "ALL":
@@ -119,28 +107,23 @@ def all():
     return True, "PASS"
 
 
-"""Sort all test names."""
-
-
 def list():
+    """Sort all test names."""
     print("-" * 50)
     return True, sorted(eg.keys())
 
 
-"""List test names"""
-
-
 def ls():
+    """List test names"""
     print("\nExamples of python3 main.py -e...")
     for k in list()[1]:
         print(f"\t{k}")
     return True, "PASS"
 
 
-"""Can I load a csv file into a Data?."""
-
-
 def test_data():
+    """Can I load a csv file into a Data?."""
+
     print("-" * 50)
     d = data.Data("../data/file.csv")
     for _, col in d.cols.y.items():
@@ -154,10 +137,9 @@ def test_data():
     return True, "PASS"
 
 
-"""Show we can read csv files."""
-
 
 def test_csv():
+    """Show we can read csv files."""
     print("{", end=" ")
     d = data.Data("../data/file.csv")
     for i, col in d.cols.all.items():
@@ -171,12 +153,11 @@ def test_csv():
             print(cell, end=" ")
         print("}")
 
-    # print(len(d.rows))
-
     return True, "PASS"
 
 
 def test_stats():
+    """Print some stats on column"""
     d = data.Data("../data/file.csv")
     print()
     print("xmid", d.stats(fun="mid", places=2, showCols=d.cols.x))
