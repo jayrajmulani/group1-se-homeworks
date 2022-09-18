@@ -20,7 +20,7 @@ def print_result(message, k, status):
     print(f"\n!!!!!\t{message}\t{k}\t{status}")
     print()
 
-
+'''Call `fun` on each row. Row cells are divided in `the.seperator`.'''
 def csv(fname, fun, sep=None, src=None, s=None, t=None):
     sep = config.settings["sep"].strip()
     with open(fname) as f:

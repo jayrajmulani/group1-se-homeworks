@@ -3,7 +3,16 @@ import sys
 
 
 class CLI:
+    """
+Function argument conventions: 
+1. prefix n,s,is,fun denotes number,string,bool,function; 
+2. suffix s means list of thing (so names is list of strings)
+3. c is a column index (usually)
+Misc routines
+Handle Settings
+"""    
     def __init__(self) -> None:
+        ''' Create a `the` variables'''
         self.the = {}
         self.help = " \n\
 CSV : summarized csv file \n\
@@ -24,7 +33,7 @@ OPTIONS:\n\
         k = match.group(2)
         x = match.group(3)
         self.the[k] = self.coerce(x)
-
+    '''-- Parse `the` config settings from `help`.'''
     def coerce(self, s):
         def fun(s1):
             if s1 == "true":
@@ -37,7 +46,8 @@ OPTIONS:\n\
             return int(s)
         except:
             return fun(s)
-
+    '''-- Update settings from values on command-line flags. Booleans need no values
+ (we just flip the defaults).'''
     def cli(self, t):
         for slot in t:
             v = t[slot]

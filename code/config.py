@@ -1,4 +1,4 @@
-# Definin the default settings object - Equivalent to "the" object in lua.
+''' Defining the default settings object - Equivalent to "the" object in lua.'''
 settings = {
     "nums": 512,
     "seed": 10019,

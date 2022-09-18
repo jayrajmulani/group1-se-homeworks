@@ -16,14 +16,17 @@ class Num:
         self.w = -1 if s and "-" in s else 1
         self.capacity = settings["nums"] if capacity == None else capacity
 
+    '''Num
+    Return kept numbers, sorted. '''
     def nums(self):
         if not self.isSorted:
             self._has.sort()
             self.isSorted = True
         return self._has
 
+    '''Reservoir sampler. Keep at most `the.nums` numbers 
+    (and if we run out of room, delete something old, at random).,  '''
     def add(self, v, pos=None):
-        # print("ADDD", config.settings["nums"])
         if v != "?":
             self.n = self.n + 1
             v = float(v)
@@ -41,12 +44,13 @@ class Num:
                 if pos:
                     self.isSorted = False
                     self._has[pos] = v
-
+    '''Diversity (standard deviation for Nums, entropy for Syms)'''
     def div(self, a=None):
         if not a:
             a = self._has
         return standard_dev(a)
 
+    '''Central tendency (median for Nums, mode for Syms)'''
     def mid(self, a=None):
         if not a:
             a = self.nums()
