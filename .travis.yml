@@ -6,4 +6,12 @@ install:
 before-script:
   - export PYTHONPATH=$PYTHONPATH:./tests/
 script:
+  - python3 code/main.py -e LIST -f ../data/file.csv
+  - python3 code/main.py -e LS -f ../data/file.csv
+  - python3 code/main.py -e bignum -f ../data/file.csv
+  - python3 code/main.py -e csv -f ../data/file.csv
+  - python3 code/main.py -e data -f ../data/file.csv
   - python3 code/main.py -e num -f ../data/file.csv
+  - python3 code/main.py -e stats -f ../data/file.csv
+  - python3 code/main.py -e sym -f ../data/file.csv
+  - python3 code/main.py -e the -f ../data/file.csv
