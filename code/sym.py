@@ -8,6 +8,8 @@ class Sym:
         self.name = s if s else ""
         self._has = {}
 
+    '''Sym:
+     Add one thing to `col`. For Num, keep at most `nums` items.'''
     def add(self, v):
         if v != "?":
             self.n = self.n + 1
