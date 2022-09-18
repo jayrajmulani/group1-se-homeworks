@@ -1,8 +1,23 @@
-import num, sym
+import sym
+import num
 import re
 
 
 class Cols:
+    """
+Cols class 
+
+   - Input ==> The class takes a dictionary of header values 
+        (key, value) -> (index, header_name)
+
+   - Output ==> The class calculates the following values
+
+        1) all : a dictionary to store all variables
+        2) X : a dictionary to store all independent variables
+        3) Y : a dictionary to store all dependent variables
+        4) klass : a dictionary to store all the variables which are skipped
+
+"""    
     def __init__(self, names) -> None:
         self.names = names if names else {}
         self.all = {}
@@ -46,3 +61,5 @@ class Cols:
 
 # c = Cols(names)
 # c.cols()
+if __name__ == "__main__":
+    pass

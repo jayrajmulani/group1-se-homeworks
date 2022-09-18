@@ -3,6 +3,20 @@ import sys
 
 
 class CLI:
+    """
+CLI class 
+
+   - Input ==> The class takes a dictionary of header values 
+        (key, value) -> (index, header_name)
+
+   - Output ==> The class calculates the following values
+
+        1) all : a dictionary to store all variables
+        2) X : a dictionary to store all independent variables
+        3) Y : a dictionary to store all dependent variables
+        4) klass : a dictionary to store all the variables which are skipped
+
+"""    
     def __init__(self) -> None:
         self.the = {}
         self.help = " \n\
