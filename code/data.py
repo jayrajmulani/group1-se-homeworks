@@ -5,7 +5,7 @@ import num, sym
 
 class Data:
     '''
-     `Data` is a holder of `rows` and their sumamries (in `cols`).
+     `Data` is a holder of `rows` and their summaries (in `cols`).
     '''
     def __init__(self, src=None) -> None:
         self.cols = None       
@@ -19,7 +19,7 @@ class Data:
                 self.add(row)
 
     '''Data
-        Add a `row` to `data`. Calls `add()` to  updatie the `cols` with new values.'''
+        Add a `row` to `data`. Calls `add()` to  update the `cols` with new values.'''
     def add(self, xs, row=None):
         if not self.cols:
             self.cols = Cols(xs)

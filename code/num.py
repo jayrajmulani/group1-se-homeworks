@@ -27,7 +27,6 @@ class Num:
     '''Reservoir sampler. Keep at most `the.nums` numbers 
     (and if we run out of room, delete something old, at random).,  '''
     def add(self, v, pos=None):
-        # print("ADDD", config.settings["nums"])
         if v != "?":
             self.n = self.n + 1
             v = float(v)
@@ -51,7 +50,7 @@ class Num:
             a = self._has
         return standard_dev(a)
 
-    '''Central tendancy (median for Nums, mode for Syms)'''
+    '''Central tendency (median for Nums, mode for Syms)'''
     def mid(self, a=None):
         if not a:
             a = self.nums()

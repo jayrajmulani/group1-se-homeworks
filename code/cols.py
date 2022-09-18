@@ -45,22 +45,6 @@ Cols class
                     number_x += 1
             else:
                 self.klass = self.col
-
-
-#   ONLY FOR TESTING
-
-#
-
-# names= {1:       "Clndrs",
-# 2 :      "Volume",
-# 3  :     "Hp:",
-# 4  :     "Lbs-",
-# 5 :     "Acc+",
-# 6  :     "Model",
-# 7  :     "origin",
-# 8  :     "Mpg+"}
-
-# c = Cols(names)
-# c.cols()
+                
 if __name__ == "__main__":
     pass

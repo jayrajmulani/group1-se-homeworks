@@ -4,15 +4,12 @@ import sys
 
 class CLI:
     """
- Function argument conventions: 
- 1. two blanks denote optionas, four blanls denote locals:
- 2. prefix n,s,is,fun denotes number,string,bool,function; 
- 3. suffix s means list of thing (so names is list of strings)
- 4. c is a column index (usually)
-
- Misc routines
- Handle Settings
-
+Function argument conventions: 
+1. prefix n,s,is,fun denotes number,string,bool,function; 
+2. suffix s means list of thing (so names is list of strings)
+3. c is a column index (usually)
+Misc routines
+Handle Settings
 """    
     def __init__(self) -> None:
         ''' Create a `the` variables'''

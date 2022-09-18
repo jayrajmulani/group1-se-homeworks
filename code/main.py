@@ -1,9 +1,6 @@
 import cli
 import config
 import sys
-
-# import num
-# import random
 sys.path.append("../tests/")
 
 import tests
