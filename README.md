@@ -85,7 +85,7 @@ Data          | [Data](./code/data.py)
 
 This project is licensed under [MIT](https://mit-license.org/).
 
-Further details regarding the license can be found [here](https://github.com/jayrajmulani/group2-se-homeworks/blob/main/LICENSE).
+Further details regarding the license can be found [here](https://github.com/jayrajmulani/group1-se-homeworks/blob/main/LICENSE).
 
 ## Contributors
 
