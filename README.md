@@ -8,7 +8,7 @@
 [![Travis](https://app.travis-ci.com/jayrajmulani/group2-se-homeworks.svg?branch=main)](https://app.travis-ci.com/github/jayrajmulani/group2-se-homeworks/pull_requests)
 ![Repo size](https://img.shields.io/github/repo-size/jayrajmulani/group2-se-homeworks)
 [![Contributors](https://img.shields.io/github/contributors/jayrajmulani/group2-se-homeworks.svg)](https://github.com/jayrajmulani/group2-se-hw1/graphs/contributors) 
-<!-- [![DOI](https://zenodo.org/badge/532305928.svg)](https://zenodo.org/badge/latestdoi/532305928) -->
+[![DOI](https://zenodo.org/badge/532305928.svg)](https://zenodo.org/badge/latestdoi/532305928)
 
 Python scripts for creating Smart Summaries for CSV files by translating a lua system to python.
 
