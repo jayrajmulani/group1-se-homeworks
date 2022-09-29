@@ -7,7 +7,7 @@
 [![Build](https://github.com/jayrajmulani/group2-se-homeworks/actions/workflows/auto-test.yml/badge.svg)](https://github.com/jayrajmulani/group2-se-homeworks/actions/workflows/auto-test.yml)
 [![Travis](https://app.travis-ci.com/jayrajmulani/group2-se-homeworks.svg?branch=main)](https://app.travis-ci.com/github/jayrajmulani/group2-se-homeworks/pull_requests)
 ![Repo size](https://img.shields.io/github/repo-size/jayrajmulani/group2-se-homeworks)
-[![Contributors](https://img.shields.io/github/contributors/jayrajmulani/group2-se-homeworks.svg)](https://github.com/jayrajmulani/group2-se-hw1/graphs/contributors) 
+[![Contributors](https://img.shields.io/github/contributors/jayrajmulani/group2-se-homeworks.svg)](https://github.com/jayrajmulani/group2-se-hw1/graphs/contributors)
 [![DOI](https://zenodo.org/badge/532305928.svg)](https://zenodo.org/badge/latestdoi/532305928)
 
 Python scripts for creating Smart Summaries for CSV files by translating a lua system to python.
@@ -30,7 +30,7 @@ Lua is a powerful programming language with several salient features like:
 
 Lua has been in use in several prominent sites on the internet such as alibaba.com and roblox.
 
-This repo aims to convert a sample code in Lua to Python, preserving the core logic of the code. 
+This repo aims to convert a sample code in Lua to Python, preserving the core logic of the code.
 
 ## Getting Started
 
@@ -38,13 +38,13 @@ This repo aims to convert a sample code in Lua to Python, preserving the core lo
 
 Ensure python is installed. You can check the version of python in the system using:
 
-``` bash
+```bash
 python --version
 ```
 
 Check if pip is installed. This can be done with the command:
 
-``` bash
+```bash
 pip --version
 ```
 
@@ -54,16 +54,15 @@ The csv file can be accessed in the [Data folder](./data/file.csv)
 
 Clone this repository using
 
-``` bash
+```bash
 git clone https://github.com/jayrajmulani/group2-se-homeworks.git
 ```
 
 You can download all the dependencies required to run the file using:
 
-``` bash
+```bash
 pip install -r requirements.txt
 ```
-
 
 ## File and function mapping
 
@@ -73,13 +72,29 @@ The scripts for test cases `the`, `sym`, `num`, `bignum`, `eg.csv`, `eg.data` an
 
 The Lua classes and corresponding python implementation scripts are listed below:
 
-Class         | Corresponding python script
-------------- | -------------
-Num           | [Num](./code/num.py)
-Sym           | [Sym](./code/sym.py)
-Cols          | [Cols](./code/cols.py)
-Row           | [Row](./code/row.py)
-Data          | [Data](./code/data.py)
+| Class | Corresponding python script |
+| ----- | --------------------------- |
+| Num   | [Num](./code/num.py)        |
+| Sym   | [Sym](./code/sym.py)        |
+| Cols  | [Cols](./code/cols.py)      |
+| Row   | [Row](./code/row.py)        |
+| Data  | [Data](./code/data.py)      |
+
+## Code Coverage
+
+| Name                               | Stmts | Miss | Cover |
+| ---------------------------------- | ----- | ---- | ----- |
+| [tests/tests.py](./tests/tests.py) | 119   | 8    | 93%   |
+| [code/cli.py](./code/cli.py)       | 49    | 8    | 8%    |
+| [code/cols.py](./code/cols.py)     | 27    | 1    | 96%   |
+| [code/config.py](./code/config.py) | 1     | 0    | 100%  |
+| [code/data.py](./code/data.py)     | 40    | 2    | 95%   |
+| [code/main.py](./code/main.py)     | 15    | 1    | 93%   |
+| [code/num.py](./code/num.py)       | 52    | 0    | 100%  |
+| [code/row.py](./code/row.py)       | 6     | 0    | 100%  |
+| [code/sym.py](./code/sym.py)       | 29    | 0    | 100%  |
+| [code/utils.py](./code/utils.py)   | 39    | 4    | 90%   |
+| TOTAL                              | 377   | 24   | 94%   |
 
 ## License
 
