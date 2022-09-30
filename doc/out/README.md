@@ -72,35 +72,35 @@
 
 ### [Group-13](https://github.com/sankettangade/aGoodRepoSE)
 
-| Notes | evidence | grade/assessment |
+| Notes | Evidence | Grade/Assessment |
 | ----- | -------- | ---------------- |
 | Video1 | For people starting with 2020 or 2021 projects, 2min video of old functionality | N/A|
 | Video2 | For people starting with 2020 or 2021 projects, 2min video of new functionality, showing a significant delta from old. For everyone else, 2min video of all functionality. | N/A |
-| Workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot) | Visible in Insights -> Contributors | 1 |
-| Number of commits | Present in Insights -> Contributors | 3 |
-| Number of commits: by different people | Present in Insights -> Contributors| 2 |
+| Workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot) | Visible in Insights -> Contributors | 2 |
+| Number of commits | 104 commits - Can be seen on top of repository| 3 |
+| Number of commits: by different people | Present in Insights -> Contributors - ample amount of commits| 2 |
 | Issues reports: there are **many** | 2 issues are opened | 2 |
-| Issues are being closed | Issues are not closed | 0 |
+| Issues are being closed | None of the Issues are closed | 0 |
 | DOI badge: exists | Not present in Repository | 0 |
-| Docs: doco generated, format not ugly | Assessed by viewing files | 3|
+| Docs: doco generated, format not ugly | Not found code for automatic doc generator | 1 |
 | Docs: what: point descriptions of each class/function (in isolation) | Not Explained in README.md | 0 |
-| Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z | doc page entries, testcases in readme | 3 |
-| Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing | Readme, docs file| N/A |
-| Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code. | | N/A|
-| Use of version control tools | | 3|
+| Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z | doc page entries, testcases in readme | 1 |
+| Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing | N/A | N/A |
+| Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code. | N/A | N/A|
+| Use of version control tools | Git and Github are used as version control systems| 3|
 | Use of style checkers | config files in GH showing your config | 3|
 | Use of code formatters. | config files in GH showing your this formatter's config | 3|
 | Use of syntax checkers. | config files iin GH showing this checker's config | 3|
-| Use of code coverage | config files in GH |code coverage badge is not there, but code coverage mentioned in readme |2|
+| Use of code coverage | code coverage badge is not there |0|
 | Other automated analysis tools | config files in GH | 0|
-| Test cases exist | dozens of tests and those test cases are more than 30% of the code base | |3|
-| Test cases are routinely executed | E.g. travis-com.com or github actions or something | | 1 |
-| The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up | | 2|
-| Issues are discussed before they are closed | even if you discuss in slack, need a sumamry statement here | | 2 |
-| Chat channel: exists | Link or screenshots | not provided | 1|
-| Test cases: a large proportion of the issues related to handling failing cases. | If a test case fails, open an issue and fix it | 1 |
-| Evidence that the whole team is using the same tools: everyone can get to all tools and files | | 3|
-| Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people) | | 3 |
-| Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer) | | 3 |
-| Evidence that the members of the team are working across multiple places in the code base | | 3 |
-| Short release cycles | (hard to see in short projects) project members are committing often enough so that everyone can get your work | | 1 |
+| Test cases exist | dozens of tests and those test cases are more than 30% of the code base | 3|
+| Test cases are routinely executed | E.g. travis-com.com or github actions or something | 2 |
+| The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up | Read contributing.md file | 2|
+| Issues are discussed before they are closed | No issues are discussed and none of the issues are closed | 0 |
+| Chat channel: exists | Link not provided for chat channels | 1 |
+| Test cases: a large proportion of the issues related to handling failing cases. | If a test case fails, open an issue and fix it | 2 |
+| Evidence that the whole team is using the same tools: everyone can get to all tools and files | Install.md file is provided so that everyone can understand how to access all tools and files present | 3|
+| Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people) | Configuration files present in the repo| 3 |
+| Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer) | Code in functional on all contributor devices | 3 |
+| Evidence that the members of the team are working across multiple places in the code base | It can be seen from the commits that contributors have work on different parts of the project| 3 |
+| Short release cycles (hard to see in short projects) project members are committing often enough so that everyone can get your work | Only one release till date | 2 |
