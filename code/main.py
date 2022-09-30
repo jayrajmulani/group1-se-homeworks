@@ -15,4 +15,4 @@ if len(sys.argv) == 1:
 
 if the["eg"] != "nothing":
     tests.runs(the["eg"])
-exit(tests.fails)
+exit(tests.fails-1)
