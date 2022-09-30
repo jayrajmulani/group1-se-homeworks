@@ -72,10 +72,9 @@
 
 ### [Group-13](https://github.com/sankettangade/aGoodRepoSE)
 
-| Notes | evidence  
- | Grade/ Assessment |
+| Notes | evidence | grade/assessment |
+| ----- | -------- | ---------------- |
 
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | Video1 | For people starting with 2020 or 2021 projects, 2min video of old functionality | N/A|
 | Video2 | For people starting with 2020 or 2021 projects, 2min video of new functionality, showing a significant delta from old. For everyone else, 2min video of all functionality. | N/A |
 | Workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot) | Visible in Insights -> Contributors | 1 |
@@ -90,15 +89,15 @@
 | Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing | Readme, docs file| N/A |
 | Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code. | | N/A|
 | Use of version control tools | | 3|
-| Use of style checkers | config files in GH showing your config | |3|
-| Use of code formatters. | config files in GH showing your this formatter's config | |3|
-| Use of syntax checkers. | config files iin GH showing this checker's config | |3|
+| Use of style checkers | config files in GH showing your config | 3|
+| Use of code formatters. | config files in GH showing your this formatter's config | 3|
+| Use of syntax checkers. | config files iin GH showing this checker's config | 3|
 | Use of code coverage | config files in GH |code coverage badge is not there, but code coverage mentioned in readme |2|
 | Other automated analysis tools | config files in GH | 0|
 | Test cases exist | dozens of tests and those test cases are more than 30% of the code base | |3|
 | Test cases are routinely executed | E.g. travis-com.com or github actions or something | | 1 |
 | The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up | | 2|
-| Issues are discussed before they are closed | even if you discuss in slack, need a sumamry statement here | | |
+| Issues are discussed before they are closed | even if you discuss in slack, need a sumamry statement here | | 2 |
 | Chat channel: exists | Link or screenshots | not provided | 1|
 | Test cases: a large proportion of the issues related to handling failing cases. | If a test case fails, open an issue and fix it | 1 |
 | Evidence that the whole team is using the same tools: everyone can get to all tools and files | | 3|
