@@ -47,3 +47,23 @@ jobs:
           python3 code/main.py -e stats -f ../data/file.csv
           python3 code/main.py -e sym -f ../data/file.csv
           python3 code/main.py -e the -f ../data/file.csv
+      - name: Test with custom test engine through coverage.py
+        run: |
+          coverage run code/main.py -e ALL
+      - id: Get_Coverage_Report
+        run: |
+          codecov=$(coverage report)
+          echo "$codecov"
+          regex="TOTAL.+[ ]([0-9]?[0-9]?[0-9])%"
+          if  [[ $codecov =~ $regex ]]
+          then
+            echo "##[set-output name=total_coverage;]${BASH_REMATCH[1]}%"
+          fi
+      - name: Get Badge for Coverage Report 
+        uses: RubbaBoy/BYOB@v1.3.0
+        with:
+          NAME: coverage_report
+          LABEL: 'Total Coverage'
+          STATUS: ${{ steps.Get_Coverage_Report.outputs.total_coverage }}
+          COLOR: 00EEFF
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
