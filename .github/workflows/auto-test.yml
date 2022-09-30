@@ -49,7 +49,7 @@ jobs:
           python3 code/main.py -e the -f ../data/file.csv
       - name: Test with custom test engine through coverage.py
         run: |
-          coverage run code/main.py -e ALL
+          coverage run code/main.py -e ALL -f ../data/file.csv
       - id: Get_Coverage_Report
         run: |
           codecov=$(coverage report)
