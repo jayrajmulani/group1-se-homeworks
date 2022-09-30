@@ -28,19 +28,11 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Build virtual environment
       run: | 
-<<<<<<< HEAD
         python -m venv venv
         source venv/bin/activate
     - name: Test with custom test engine through coverage.py
       run: |
         python -m coverage run --source=code -m code.main -e ALL
-=======
-        python3 -m venv venv
-        source venv/bin/activate
-    - name: Test with custom test engine through coverage.py
-      run: |
-        python3 -m coverage run --source=code -m code.main -e ALL
->>>>>>> 972e01fe565ac43c680fc324439521f7cbd6c15f
     - id: Get_Coverage_Report
       run: |
         codecov=$(python3 -m coverage report -m)
