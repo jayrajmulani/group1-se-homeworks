@@ -32,7 +32,7 @@ jobs:
         source venv/bin/activate
     - name: Test with custom test engine through coverage.py
       run: |
-        echo "PYTHONPATH=code" >> $GITHUB_ENV
+        echo "PYTHONPATH=code:tests:data" >> $GITHUB_ENV
         coverage run code/main.py -e ALL
     - id: Get_Coverage_Report
       run: |
