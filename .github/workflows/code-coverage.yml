@@ -33,7 +33,7 @@ jobs:
     - name: Test with custom test engine through coverage.py
       run: |
         echo "PYTHONPATH=code" >> $GITHUB_ENV
-        coverage run main.py -e ALL
+        coverage run code/main.py -e ALL
     - id: Get_Coverage_Report
       run: |
         codecov=$(coverage report)
