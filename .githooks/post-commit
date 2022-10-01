@@ -3,9 +3,9 @@ echo "executing post-commit"
 echo 'Git commit successful. Generating documentation'
 homedir=$(git rev-parse --show-toplevel)
 cd $homedir
-cd doc/code
+cd docs/code
 python -m pdoc ../code/* -o .
 cd $homedir
-cd doc/tests
+cd docs/tests
 python -m pdoc ../tests/* -o .
 echo 'Regenerated documentation files'
