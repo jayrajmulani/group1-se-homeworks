@@ -1,12 +1,10 @@
-#!/bin/sh
-echo "executing post-commit"
-echo 'Git commit successful. Generating documentation'
+#! /bin/bash
+echo 'Git commit successful. Running test suite'
 homedir=$(git rev-parse --show-toplevel)
-echo $homedir
 cd $homedir
+#python3 -m test.test_csv
+#echo 'Test suite ended'
+
 cd doc/code
 python -m pdoc ../code/* -o .
-cd $homedir
-cd doc/tests
-python -m pdoc ../tests/* -o .
-echo 'Regenerated documentation files'
+echo 'Regenerated documentation'
