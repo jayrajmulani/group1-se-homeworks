@@ -11,7 +11,7 @@ obj = cli.CLI()
 the = obj.cli(obj.the)
 config.settings = the
 
-"""Print help by default"""
+"""Print help if no args provided"""
 if len(sys.argv) == 1:
     print(obj.help)
 
