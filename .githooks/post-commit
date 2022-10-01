@@ -7,4 +7,4 @@ cd $homedir
 
 cd doc/code
 python -m pdoc ../code/* -o .
-echo 'Regenerated documentation post commit'
+echo 'Regenerated documentation'
