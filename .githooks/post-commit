@@ -6,4 +6,4 @@ python -m pdoc ../code/* -o .
 cd $homedir
 cd doc/tests
 python -m pdoc ../tests/* -o .
-echo 'Regenerated documentation'
+echo 'Regenerated documentation files'
