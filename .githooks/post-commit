@@ -1,0 +1,6 @@
+echo 'Git commit successful. Running test suite'
+homedir=$(git rev-parse --show-toplevel)
+cd $homedir
+cd docs
+python -m pdoc ../code/* -o .
+echo 'Regenerated documentation'
