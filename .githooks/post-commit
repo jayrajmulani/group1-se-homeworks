@@ -6,5 +6,5 @@ cd $homedir
 #echo 'Test suite ended'
 
 cd doc/code
-python -m pdoc ../code/* -o .
+python3 -m pdoc ../code/* -o .
 echo 'Regenerated documentation'
