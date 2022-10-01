@@ -7,4 +7,4 @@ cd $homedir
 
 cd doc/code
 python3 -m pdoc ../code/* -o .
-echo 'Regenerated documentation'
+echo 'Regenerated documentation!'
