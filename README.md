@@ -9,7 +9,7 @@
 ![Repo size](https://img.shields.io/github/repo-size/jayrajmulani/group1-se-homeworks)
 [![Contributors](https://img.shields.io/github/contributors/jayrajmulani/group1-se-homeworks.svg)](https://github.com/jayrajmulani/group2-se-hw1/graphs/contributors)
 [![DOI](https://zenodo.org/badge/532305928.svg)](https://zenodo.org/badge/latestdoi/532305928)
-
+![Code Coverage](https://img.shields.io/badge/Code%20Coverage-94%25-green)
 Python scripts for creating Smart Summaries for CSV files by translating a lua system to python.
 
 ## Table of Contents
