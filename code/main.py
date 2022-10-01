@@ -6,7 +6,7 @@ sys.path.append("../tests/")
 
 import tests
 
-""" Start up"""
+"""Start up the program - Command Line Interface"""
 obj = cli.CLI()
 the = obj.cli(obj.the)
 config.settings = the
